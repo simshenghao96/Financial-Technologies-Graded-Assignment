@@ -1,0 +1,118 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Payment Page 3 (ESE)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box1 {
+            width: 250px;
+            height: 50px;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        input {
+            width: 390px;
+            height: 40px;
+        }
+
+        .centre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: #AC9362;
+            width: 600px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        select {
+            width: 400px;
+            height: 50px;
+        }
+
+        p {
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="ESE_home_page_logged_in.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+    </header>
+    <div class="centre">
+        <form id="form3" action="ESE_payment_page_4.html">
+            <p><u><b>Employment Details</b></u></p>
+            <p>Account Details:</p>
+
+            <!--Employment Status-->
+            <label>Employment Status</label>
+            <br>
+            <select class="employment-status" required>
+                <option value="" disabled selected>Select Employment Status</option>
+                <option value="employed">Employed</option>
+                <option value="self-employed">Self Employed</option>
+                <option value="Unemployed">Unemployed</option>
+            </select>
+            <br><br>
+
+            <!--Occupation-->
+            <label>Occupation</label>
+            <br>
+            <select class="occupation" required>
+                <option value="" disabled selected>Select Occupation</option>
+                <option value="account">Accountant</option>
+                <option value="bank">Bank officer</option>
+                <option value="insurance">Insurance Agent</option>
+                <option value="economist">Economist</option>
+            </select>
+            <br><br>
+
+            <!--Employer's Name-->
+            <label>Employer's Name</label>
+            <br>
+            <input type="text" placeholder="Enter your Employer's Name" required>
+            <br><br>
+
+            <!--Income per annum range-->
+            <label>Income per annum range</label>
+            <br>
+            <select class="income-range" required>
+                <option value="" disabled selected>Select income per annum range</option>
+                <option value="range1">Below $30,000 p.a.</option>
+                <option value="range2">$30,000 to $60,000 p.a.</option>
+                <option value="range3">$60,001 to $90,000 p.a.</option>
+                <option value="range4">$90,001 to $120,000 p.a.</option>
+                <option value="range5">Above $120,000 p.a.</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Continue">
+        </form>
+    </div>
+    <script src="database.js"></script>
+</body>
+
+</html>

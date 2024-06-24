@@ -1,0 +1,116 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Transaction Page 1 (ESE)-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Payment (Structured Deposit)</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .box1 {
+                width: 250px;
+                height: 50px;
+            }
+
+            .logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 250px;
+            }
+
+            input {
+                width: 400px;
+                height: 50px;
+            }
+
+            .centre {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+                background-color: #AC9362;
+                width: 600px;
+                margin: auto;
+                padding: 10px;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            select {
+                margin-right: 5px;
+            }
+
+            p {
+                color: white;
+            }
+
+            label {
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="ESE_home_page_logged_in.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+        </header>
+        <div class="centre">
+            <form action="ESE_payment_page_2.html">
+                <p><u><b>Get Started</b></u></p>
+                <p>Account Details:</p>
+    
+                <!--Full Name-->
+                <label for="full-name">Full Name</label>
+                <br>
+                <input type="text" id="full-name" placeholder="Enter Name" required>
+                <br><br>
+    
+                <!--Email Address-->
+                <label for="email-address">Email Address</label>
+                <br>
+                <input type="email" id="email-address" placeholder="Enter Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address format" required> 
+                <br><br>
+    
+                <!--Mobile Number-->
+                <label for="mobile-number">Registered Mobile Number</label>
+                <div class="container">
+                    <select id="mobile-number1" required>
+                        <option value="" disabled selected>Select Country Code</option>
+                        <option value="SG">+65</option>
+                        <option value="MY">+60</option>
+                        <option value="IDNS">+62</option>
+                        <option value="China">+86</option>
+                    </select>
+                    <input type="tel" id="mobile-number2" placeholder="Enter Mobile Number" pattern="[89][0-9]{7}" title="Invalid telephone number format" required>
+                </div>
+                <br><br>
+    
+                <!--Mailing Address-->
+                <label for="mailing-address">Mailing Address</label>
+                <br>
+                <input type="text" id="mailing-address" placeholder="Enter Mailing Address" required>
+                <br><br>
+
+                <!--NRIC / Passport Number-->
+                <label for="nric">NRIC / Passport Number</label>
+                <br>
+                <input type="text" id="nric" placeholder="Enter NRIC / Passport Number" pattern="[STGF][0-9]{7}[A-Z]" title="Invalid NRIC Format" required>
+                <br><br>
+
+
+                <input type="submit" value="Continue"> 
+            </form>
+        </div>
+        <script src="database.js"></script>
+    </body>
+</html>

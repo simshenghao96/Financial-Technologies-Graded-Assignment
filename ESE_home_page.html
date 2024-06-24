@@ -1,0 +1,226 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Main Home Page (For the use of ESE)-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap CSS Links-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>Secure Savings Bank</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Work Sans', sans-serif;
+                font-weight: 300;
+            }
+
+            /* Start of code adjustment for header */
+
+            header {
+                background: #ffdf92;
+            }
+
+            .container {
+                width: 85%;
+                /*
+                background-color: aqua;
+                */
+                margin: 0 auto;
+            }
+
+            .logo {
+                float: left;
+                padding: 5px;
+            }
+
+            
+            /* This part of the code is to bring the text below the header */
+            header::after {
+                content: '';
+                display: table;
+                clear: both;
+            }
+            
+            nav {
+                float: right;
+            }
+
+            nav ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            nav li {
+                display: inline-flex;
+                margin-left: 70px;
+                padding-top: 20px;
+                position: relative;
+            }
+
+            nav a {
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+            
+            img {
+                width: 225px;
+            }
+
+            /* End of code adjustment for header */
+            
+            
+            /* For Hovering over the buttons on the navigation bar */
+            nav a:hover {
+                color: blue;
+            }
+
+            nav a::before {
+                content: '';
+                display: block;
+                height: 5px; 
+                background-color: #444;
+                position: absolute;
+                top: 0;
+                width: 0%; 
+                transition: ease-in-out 1000ms;
+            }
+
+            nav a:hover::before {
+                width: 100%;
+            }
+
+            #header {
+                text-align: center;
+            }
+
+            /* For footer Navigation bar */
+
+            footer {
+                background-color: #AC9362;
+                padding: 10px;
+                text-align: center;
+            }
+
+            /* For the find out more buttons */
+            button {
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                text-decoration: none;
+            }
+
+            .button1 {
+                background: #AC9362;
+                color: white;
+                text-decoration: none;
+            }
+
+            .button2 {
+                background: #AC9362;
+                color: white;
+                text-decoration: none;
+            }
+
+            .button3 {
+                background: #AC9362;
+                color: white;
+                text-decoration: none;
+            }
+
+            #footer {
+                text-align: center;
+            }
+
+            .bodyAnchor {
+                text-decoration: none;
+                color: white;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <img src="ESE_Website_logo.png" alt="logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="ESE_service_page.html">Services</a></li>
+                        <li><a href="ESE_help_support_page.html">Help & Support</a></li>
+                        <li><a href="ESE_Registration_Page_1.html">Register</a></li>
+                        <li><a href="ESE_Login_Page.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <p id="header">
+                        Hello, looking to invest in something ? Start your investment with the following suggested services below !
+                    </p>
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <h3>Unit Trusts</h3>
+                        <img src="ESE_unit_trust_logo.png">
+                        <p>
+                            Make every dollar count when you are making an investment. Invest in Unit Trusts which are professionally managed fundsto help you grow your wealth.
+                            A Unit Trust invests a pool of money, collected from a number of investors, in a range of assets. By pooling your money with that of other investors,
+                            you'll be able to invest in a wide range of assets. Successful investments in the assets add value to the fund and their returns are then distributed back
+                            to investors.
+                            If you want to find out more, click on the bottom to find out more !
+                        </p>
+                        <button class="button button1"><a href="ESE_Login_Page.html" class="bodyAnchor">Get Started</a></button>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <h3>Gold & Silver</h3>
+                        <img src="ESE_Gold_Silver_logo.jpg">
+                        <p>
+                            Gold can diversify your portfolio. It has a low connection with assets like stocks and bonds so when the stock market goes down, gold prices may go up. Gold is your physical asset which provides security and control as you can touch and see it physically. Gold is a secure asset when there is inflation or financial crisis, you can turn to gold as a store value.
+                            If you want to find out more, click on the bottom to find out more !
+                        </p>
+                        <button class="button button2"><a href="ESE_Login_Page.html" class="bodyAnchor">Get Started</a></button>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-10">
+                        <h3>Structured Deposits</h3>
+                        <img src="ESE_structured_deposit_logo.jpeg">
+                        <p>
+                            Structured deposit is an investment product, where the returns is dependent on the performance of underlying financial instruments such as the market indices, interest rates, foreign exchange, or a combination of these. The returns are guaranteed upon maturity so get started investing in Structured Deposits now !
+                            Click on the button to find out more and get started !
+                        </p>
+                        <button class="button button3"><a href="ESE_Login_Page.html" class="bodyAnchor">Get Started</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                <p id="footer">
+                    Contact us at our helpline or visit our services to learn more !
+                    <br>
+                    Copyright All rights Reserved 2023
+                </p>
+            </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

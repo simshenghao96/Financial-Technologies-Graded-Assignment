@@ -1,0 +1,127 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Registration Page 2 (ESE)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        header {
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        select {
+            margin-right: 10px;
+        }
+
+        .centre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: #AC9362;
+            width: 600px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #AC9362;
+            width: 500px;
+            margin: auto;
+        }
+
+        h6 {
+            text-align: center;
+            background-color: #AC9362;
+            width: 500px;
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        input {
+            width: 400px;
+            height: 50px;
+        }
+
+        button {
+            width: 400px;
+            height: 50px;
+        }
+
+        p {
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+
+        h1 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="ESE_home_page.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+    </header>
+
+    <div class="centre">
+        <form id="regForm2" action="ESE_Login_Page.html">
+            <h1>Register an account</h1>
+            <br><br>
+            <label><u>Step 2 (Personal Particulars)</u></label>
+            <br><br>
+            <input type="text" id="bankID" placeholder="Create Banking ID" required>
+            <br><br>
+            <input type="password" onkeyup="" id="password1" placeholder="Create Password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                title="The minimum requirements of the password is Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+                required>
+            <br><br>
+            <input type="password" onkeyup="" id="password2" placeholder="Re-Enter Password"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                title="The minimum requirements of the password is Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character"
+                required>
+            <br><br>
+            <button onclick="passwordValidation()">Register</button>
+        </form>
+    </div>
+    <script>
+        function passwordValidation() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            if (password1 !== password2) {
+                alert("Create Password and Re-enter Password fields do not match, please try again!");
+            }
+        }
+    </script>
+</body>
+
+</html>

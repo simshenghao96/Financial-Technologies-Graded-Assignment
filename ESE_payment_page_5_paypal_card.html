@@ -1,0 +1,122 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Payment Method via Paypal / Credit Card-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ffdf92;
+        }
+
+        input {
+            width: 400px;
+            height: 50px;
+        }
+
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        .centre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: #AC9362;
+            width: 600px;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #subtext {
+            text-align: center;
+        }
+
+        #headertext {
+            text-align: center;
+        }
+
+        #paypal-button-container {
+            text-align: center;
+        }
+
+        p {
+            color: white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="ESE_home_page_logged_in.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+    </header>
+    <div class="centre">
+        <form>
+            <p id="headertext"><u><b>Payment</b></u></p>
+            <p id="subtext">Choose one mode of payment below (Credit Card / Paypal):</p>
+            <div id="paypal-button-container"></div>
+        </form>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=Abvpo0M81ASpSiCXV7zLWj6JLga6WESCH2SMjCOaTD9q-fGNnqTCE01nJJJmFBh-zAze0jPQqQ-Lwrav&currency=USD"></script>
+    <script>
+        // Function for setting up the paypal API that links to the popup window and redirects to payment complete page upon payment completion
+        function payPal() {
+            paypal.Buttons({
+                // Styling of the Paypal buttons
+                style: {
+                    shape: 'rect',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'paypal',
+                },
+
+                // For transaction Process
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (orderData) {
+
+                        // Full available details 
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                        // Success Message and redirecting to the following page 
+                        const element = document.getElementById('paypal-button-container');
+//                      element.innerHTML = '<h3>Transaction Confirmed</h3>\n<button onclick="reDirect()">Next</button>';
+                        element.innerHTML = window.location.href = "ESE_payment_complete_page.html";
+
+                    });
+                },
+
+                // Launces paypal checkout page
+                createOrder: function (data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{ "amount": { "currency_code": "USD", "value": 0.99 } }]
+                    });
+                },
+
+                // For exception handlings
+                onError: function (err) {
+                    console.log(err);
+                }
+            }).render('#paypal-button-container');
+        }
+        payPal();
+    </script>
+</body>
+
+</html>

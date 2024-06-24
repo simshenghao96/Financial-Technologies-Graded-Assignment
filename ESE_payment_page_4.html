@@ -1,0 +1,143 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Payment Method Selection Page 4 (ESE)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .logo {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+        }
+
+        .centre {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            background-color: #AC9362;
+            width: 800px;
+            margin: auto;
+            padding: 40px;
+        }
+
+        #subtext {
+            text-align: center;
+        }
+
+        #headertext {
+            text-align: center;
+        }
+
+        .container {
+            padding: 10px;
+        }
+
+        #bankAccRedirect {
+            width: 390px;
+            height: 40px;
+        }
+
+        /* For Paypal Button */
+        #paypalRedirect {
+            width: 390px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-left: 15px;
+        }
+
+        .creditCard {
+            width: 50px;
+            height: 60px;
+            padding-left: 30px;
+        }
+
+        .paypal {
+            width: 50px;
+            height: 60px;
+            padding-left: 30px;
+        }
+
+        /* For bank account button */
+        .bank {
+            width: 50px;
+            height: 60px;
+            padding-left: 30px;
+        }
+
+        #bankAccRedirect {
+            width: 390px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-left: 15px;
+        }
+
+        /* For both payment method buttons to display in a flex order */
+        .container2 {
+            display: flex;
+        }
+
+        .textButton {
+            text-align: center;
+            margin: 0 10px;
+        }
+
+        p {
+            color: white;
+        }
+
+        label {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="ESE_home_page_logged_in.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+    </header>
+    <div class="centre">
+        <div class="container">
+            <p id="headertext"><u><b>Payment</b></u></p>
+            <br>
+            <p id="subtext">Select mode of payment method below:</p>
+            <br>
+
+            <div class="container2">
+                <button id="bankAccRedirect"><span class="textButton">Bank Account</span><img src="ESE_bank_logo.jpg"
+                        alt="bank" class="bank"></button>
+
+                <button id="paypalRedirect"><span class="textButton">Paypal / Credit Card</span><img
+                        src="ESE_credit_card.png" alt="creditCard" class="creditCard"><img
+                        src="ESE_PayPal_Logo_Icon.png" alt="paypal" class="paypal"></button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('paypalRedirect').addEventListener('click', function () {
+            window.location.href = "ESE_payment_page_5_paypal_card.html";
+        });
+
+        document.getElementById('bankAccRedirect').addEventListener('click', function () {
+            window.location.href = "ESE_payment_page_5_bankAcc.html";
+        });
+    </script>
+</body>
+
+</html>

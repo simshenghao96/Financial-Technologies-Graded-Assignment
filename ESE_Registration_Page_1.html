@@ -1,0 +1,142 @@
+<!-- I declare that this code was written by me. 
+ I will not copy or allow others to copy my code. 
+ I understand that copying code is considered as plagiarism.
+ 
+ Student Name: Sim Sheng Hao
+ Student ID: 22012312
+ Class: E63C
+ Date/Time Last modified: 14/8/2023 (11.20pm)
+-->
+<!--Registration Page 1 (ESE)-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+                background-color: #ffdf92;
+                display: flex;
+                flex-direction: column;
+                margin: 0;
+
+            }
+
+            header {
+                align-items: center;
+                padding: 10px;
+            }
+
+            .logo {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 250px;
+            }
+
+            .container {
+                display: flex;
+            }
+
+            select {
+                margin-right: 5px;
+            }
+
+            .centre {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-grow: 1;
+                background-color: #AC9362;
+                width: 600px;
+                margin: auto;
+                padding-bottom: 20px;
+            }
+
+            h1 {
+                text-align: center;
+                background-color: #AC9362;
+                width: 500px;
+                margin: auto;
+            }
+
+            h6 {
+                text-align:  center;
+                background-color: #AC9362;
+                width: 500px;
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .singpass {
+                width: 325px;
+                height: 50px;
+            }
+
+            input {
+                width: 400px;
+                height: 50px;
+            }
+
+            p {
+                color: white;
+            }
+
+            label {
+                color: white;
+            }
+
+            h1 {
+                color: white;
+            }
+            
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <a href="ESE_home_page.html"><img src="ESE_Website_logo.png" alt="logo" class="logo"></a>
+        </header>
+
+        <div class="centre">
+            <form id="regForm1" action="ESE_Registration_Page_2.html">
+                <h1>Register an account</h1>
+                <br><br>
+                <label><u>Step 1 (Personal Particulars):</u></h6>
+
+                <br><br>
+                <input type="text" placeholder="Full name (As stated on NRIC/Passport)" required>
+                <br><br>
+    
+                <!--Phone Credentials-->
+                <div class="container">
+                    <!--Selection of Country Code Number-->
+                    <select id="country-code" required>
+                        <option value="#" disabled selected>Select Country Code</option>
+                        <option value="SG">+65</option>
+                        <option value="MY">+60</option>
+                        <option value="IDNS">+62</option>
+                        <option value="China">+86</option>
+                    </select>
+                    <!--Input of phone number (RegEx for +65 country code number)-->
+                    <input type="tel" placeholder="Enter Mobile Number" pattern="[89][0-9]{7}" required>
+                </div>
+                <br><br>
+    
+                <!--DOB (Date Of Birth)-->
+                <input type="date" placeholder="Date of Birth (dd-mm-yyyy)" required>
+                <br><br>
+    
+                <!--NRIC/Passport Number-->
+                <input type="text" placeholder="Enter NRIC/Passport Number" pattern="[STGF][0-9]{7}[A-Z]" title="Invalid NRIC Format" required>
+                <br><br>
+    
+                <a href="https://www.singpass.gov.sg/home/ui/login"><img src="ESE_singpass.png" alt="singpass" class="singpass"></a>
+                <br><br>
+                <input type="submit" value="Continue">
+            </form>
+        </div>
+    </body>
+</html>
